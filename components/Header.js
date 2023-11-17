@@ -1,5 +1,5 @@
 class Header extends HTMLElement {
-    
+
     constructor() {
         super();
     }
@@ -7,7 +7,14 @@ class Header extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = /* html */`
+        <div id="preloader">
+            <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        
         <header class="echo-header-area header-three header-eight">
+        
         <!-- Start Home-1 Menu & Site Logo & Social Media -->
             <div class="echo-home-1-menu header-three">
                 <div class="echo-site-main-logo-menu-social">
@@ -52,7 +59,13 @@ class Header extends HTMLElement {
                                                 <i class="rts-go-light far fa-sun"></i>
                                             </a>
                                         </div>
-                                        
+                                        <div class="echo-header-top-menu-bar echo-off-canvas menu-btn d-block d-lg-none">
+                                            <a href="javascript:void(0)">
+                                                <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.526001 0.953461H20V3.11724H0.526001V0.953461ZM7.01733 8.52668H20V10.6905H7.01733V8.52668ZM0.526001 16.0999H20V18.2637H0.526001V16.0999Z" fill="#5E5E5E" />
+                                                </svg>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -61,7 +74,50 @@ class Header extends HTMLElement {
                 </div>
             </div>
             <!-- End Home-1 Menu & Site Logo & Social Media -->
-        </header>`
-      }
+        </header>
+        <div id="side-bar" class="side-bar header-one">
+        
+        <!-- mobile menu area start -->
+        <div class="mobile-menu d-block d-lg-none">
+                <nav class="nav-main mainmenu-nav mt--30" id="nav-mobile">
+                    <ul class="mainmenu" id="mobile-menu-active">
+                        
+                    </ul>
+                </nav>
+
+                <div class="social-wrapper-one">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- mobile menu area end -->
+        </div>
+        `
+    }
 }
 window.customElements.define('x-header', Header);

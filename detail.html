@@ -225,8 +225,8 @@
                         <div class="col-xl-8 col-lg-8">
                             <div class="echo-hero-baner">
                                 <div class="echo-inner-img-ct-1  img-transition-scale">
-                                    <a href="#"><img src="image/defaul.jpg"
-                                            alt="Echo" class="post-style-1-frist-hero-img" id="categoryImg"></a>
+                                    <a href="#"><img src="image/defaul.jpg" alt="Echo"
+                                            class="post-style-1-frist-hero-img" id="categoryImg"></a>
                                 </div>
                                 <h2 class="echo-hero-title text-capitalize font-weight-bold"><a href="#"
                                         class="title-hover" id="categoryTitle"></a></h2>
@@ -246,61 +246,35 @@
                                 </div>
                                 <p class="echo-hero-discription" id="categoryContent"></p>
                             </div>
-
-                            <div class="echo-reply-area">
-                                <h5 class="title">Comment</h5>
-                                <ul class="comment-inner">
-                                    <li class="wrapper">
-                                        <div class="image-area">
-                                            <img src="assets/images/home-1/trending-left/commentator-1.png"
-                                                alt="author">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title">Esther Howard</h5>
-                                            <a href="#" class="pe-none">2 Jul 2023</a>
-                                            <p class="desc">Efficiently simplify alternative customer service rather
-                                                than efficient "outside the box" thinking. Dramatically deploy an
-                                                expanded array of manufactured.</p>
-                                        </div>
-                                        <div class="reply"><i class="fa-regular fa-share"></i> Reply</div>
-                                    </li>
-                                    <li class="wrapper">
-                                        <div class="image-area">
-                                            <img src="assets/images/home-1/trending-left/commentator-2.png"
-                                                alt="author">
-                                        </div>
-                                        <div class="content">
-                                            <h5 class="title">Esther Howard</h5>
-                                            <a href="#" class="pe-none">2 Jul 2023</a>
-                                            <p class="desc">Efficiently simplify alternative customer service rather
-                                                than efficient "outside the box" thinking. Dramatically deploy an
-                                                expanded array of manufactured.</p>
-                                        </div>
-                                        <div class="reply"><i class="fa-regular fa-share"></i> Reply</div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="echo-comment-box">
+                            <div class="echo-comment-box" id="commentWaraper">
                                 <div class="comment-box-inner">
-                                    <h5 class="title">Leave A Comment</h5>
-                                    <form action="#">
+                                    <h5 class="title">Để lại bình luận của bạn</h5>
+                                    <h6 id="commentNoitce" class="mt-2">Vui Lòng <a href="login.html"
+                                            class="text-danger">Đăng Nhập</a> Để Bình Luận</h6>
+                                    <h6 id="commentMessageReply" class="mt-2 d-none">Đang trả lời bình luận của
+                                        <span id="replyEmail" class="text-success">hieu</span> 
+                                        <a href="#"
+                                            class="text-danger" id="cancleReply">HỦY</a></h6>
+                                    <form action="#" id="commentForm">
                                         <div class="row">
-                                            <div class="col-lg-6">
-                                                <input type="text" placeholder="Full Name" required>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <input type="email" placeholder="Email Address" required>
-                                            </div>
                                             <div class="col-lg-12">
-                                                <textarea name="text" placeholder="Write Your Comment Here"></textarea>
+                                                <textarea name="text" id="comment-content"
+                                                    placeholder="Write Your Comment Here"></textarea>
                                             </div>
                                             <div class="col-12">
-                                                <button type="submit" class="submit-btn">Submit Now</button>
+                                                <button type="submit" class="submit-btn">Bình luận</button>
                                             </div>
                                         </div>
                                     </form>
                                 </div>
                             </div>
+                            <div class="echo-reply-area">
+                                <h5 class="title">Comment</h5>
+                                <h6 id="totalComment"></h6>
+                                <ul class="comment-inner" id="listComment">
+                                </ul>
+                            </div>
+                            
                         </div>
                         <div class="col-xl-4 col-lg-4 sticky-coloum-item">
                             <div class="echo-right-ct-1">
@@ -315,9 +289,10 @@
                                         </div>
                                     </div>
                                     <div class="echo-popular-item">
-                                        <div class="card m-0 rounded"  style="background-image: url(https://blog.ipleaders.in/wp-content/uploads/2021/03/What-Can-Cryptocurrencies-Provide-to-the-World-696x449.jpg);">
+                                        <div class="card m-0 rounded"
+                                            style="background-image: url(https://blog.ipleaders.in/wp-content/uploads/2021/03/What-Can-Cryptocurrencies-Provide-to-the-World-696x449.jpg);">
                                             <ul class="list-group p-2 m-0 rounded" id="priceCoin">
-                                                
+
                                             </ul>
                                         </div>
                                     </div>
